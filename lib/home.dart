@@ -4,9 +4,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Center(
-        child: Text("Welcome Home!"),
+        home: Scaffold(
+      appBar: AppBar(
+        title: Text("Home!"),
       ),
-    );
+      body: Center(
+          child: InkWell(
+        child: Text("Welcome Home!"),
+        onTap: () => Navigator.pop(context),
+      )),
+    ));
   }
 }
